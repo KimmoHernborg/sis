@@ -1,8 +1,9 @@
+#!/usr/bin/env python
+from feature_extractor import FeatureExtractor
+from PIL import Image
 import glob
 import os
 import pickle
-from PIL import Image
-from feature_extractor import FeatureExtractor
 
 fe = FeatureExtractor()
 

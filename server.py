@@ -1,11 +1,12 @@
-import os
-import numpy as np
-from PIL import Image
-from feature_extractor import FeatureExtractor
-import glob
-import pickle
+#!/usr/bin/env python
 from datetime import datetime
+from feature_extractor import FeatureExtractor
 from flask import Flask, request, render_template
+from PIL import Image
+import glob
+import numpy as np
+import os
+import pickle
 
 app = Flask(__name__)
 
