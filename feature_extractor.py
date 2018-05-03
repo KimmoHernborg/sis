@@ -8,6 +8,8 @@ class FeatureExtractor:
     def __init__(self):
         base_model = VGG16(weights='imagenet')
         self.model = Model(inputs=base_model.input, outputs=base_model.get_layer('fc1').output)
+        # Bug fix for async not working, see: https://github.com/keras-team/keras/issues/2397
+        self.model._make_predict_function()
 
     def extract(self, img):  # img is from PIL.Image.open(path) or keras.preprocessing.image.load_img(path)
         img = img.resize((224, 224))  # VGG must take a 224x224 img as an input
