@@ -1,5 +1,11 @@
 # Sis: Simple Image Search Engine
 
+## KH: Added some fixes and a multithreaded offline processor in compute_par.py
+- Added a fix to [original issue](https://github.com/matsui528/sis/issues/1), thread with [fix suggestions](https://github.com/keras-team/keras/issues/2397)
+- Added shebangs to the main python files
+- Sorted the imports
+- Multithreaded offline import + support for other image formats (eps/tga/tif) in **compute_par.py**
+
 ## [Demo](http://www.simple-image-search.xyz/)
 ![](http://yusukematsui.me/project/sis/img/screencapture2.jpg)
 
